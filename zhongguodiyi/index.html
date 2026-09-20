@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="中国第一台电脑DJS-130诞生于1958年，本站详细介绍中国计算机发展历程、DJS-130型号技术参数、历史背景及对中国科技发展的深远影响。">
+    <meta name="keywords" content="中国第一台电脑, DJS-130, 计算机发展史, 中国计算机, 电子管计算机, 硬件历史">
+    <title>中国第一台电脑 - 中国计算机发展史与DJS-130型号详解</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #c0392b;
+            --bg-color: #f4f6f8;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --border-color: #e1e4e8;
+            --spacing-unit: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 24px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-secondary);
+            font-size: 1rem;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto 32px;
+        }
+
+        .hero-btn {
+            display: inline-block;
+            background-color: white;
+            color: var(--accent-color);
+            padding: 12px 32px;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .hero-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        /* Content Grid Layout */
+        .main-content {
+            padding: 40px 0;
+        }
+
+        .grid-layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 32px;
+        }
+
+        @media (max-width: 768px) {
+            .grid-layout {
+                grid-template-columns: 1fr;
+            }
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+        }
+
+        /* Articles Section */
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 24px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--border-color);
+            color: var(--primary-color);
+        }
+
+        .article-card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            padding: 24px;
+            margin-bottom: 24px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            transition: box-shadow 0.3s;
+        }
+
+        .article-card:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .article-meta {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+        }
+
+        .article-title {
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+            color: var(--primary-color);
+        }
+
+        .article-excerpt {
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+
+        .read-more {
+            color: var(--accent-color);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        /* Sidebar */
+        aside .info-card {
+            background: var(--card-bg);
+            padding: 24px;
+            border-radius: 8px;
+            margin-bottom: 24px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .info-card h3 {
+            margin-bottom: 16px;
+            font-size: 1.2rem;
+        }
+
+        .data-list {
+            list-style: none;
+        }
+
+        .data-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 0.95rem;
+        }
+
+        .data-list li:last-child {
+            border-bottom: none;
+        }
+
+        .data-label {
+            color: var(--text-secondary);
+        }
+
+        .data-value {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .tag-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tag {
+            background: #f0f2f5;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        /* Timeline Section */
+        .timeline-section {
+            background-color: white;
+            padding: 60px 0;
+            margin-top: 40px;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background-color: var(--border-color);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+        }
+
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            right: -10px;
+            background-color: white;
+            border: 4px solid var(--accent-color);
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .left {
+            left: 0;
+        }
+
+        .right {
+            left: 50%;
+        }
+
+        .left::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            right: 30px;
+            border: medium solid white;
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent white;
+        }
+
+        .right::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            left: 30px;
+            border: medium solid white;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent white transparent transparent;
+        }
+
+        .right::after {
+            left: -10px;
+        }
+
+        .timeline-content {
+            padding: 20px 30px;
+            background-color: white;
+            position: relative;
+            border-radius: 6px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .timeline-year {
+            font-weight: 700;
+            color: var(--accent-color);
+            margin-bottom: 5px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 40px 0;
+            margin-top: 60px;
+            text-align: center;
+        }
+
+        .footer-content p {
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container nav-wrapper">
+        <div class="logo">
+            <span>◆</span> 中国计算机发展史
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">首页</a></li>
+                <li><a href="#history">历史沿革</a></li>
+                <li><a href="#tech-spec">技术参数</a></li>
+                <li><a href="#impact">深远影响</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container">
+        <h1>中国第一台电脑</h1>
+        <p>回顾DJS-130计算机诞生的峥嵘岁月，探索中国计算机工业从无到有的艰难历程与辉煌成就。</p>
+        <a href="#history" class="hero-btn">阅读发展历史</a>
+    </div>
+</section>
+
+<main class="container main-content">
+    <div class="grid-layout">
+        <div class="content-area">
+            <h2 class="section-title" id="history">发展历程：从“104机”到DJS-130</h2>
+            
+            <article class="article-card">
+                <div class="article-meta">1958年 • 技术突破</div>
+                <h3 class="article-title">中国第一台电子管计算机“103机”</h3>
+                <p class="article-excerpt">
+                    1958年8月1日，中国科学院计算技术研究所研制成功中国第一台通用数字电子计算机——103机（又名DJS-1）。这台机器的研制标志着中国进入了电子计算机时代，虽然当时仅拥有几十个真空管，运算速度仅为每秒30次，但它为后续的计算机发展奠定了基础。
+                </p>
+                <a href="#" class="read-more">了解更多关于103机 &rarr;</a>
+            </article>
+
+            <article class="article-card">
+                <div class="article-meta">1964年 • 成熟应用</div>
+                <h3 class="article-title">第一台大型通用数字电子计算机“104机”</h3>
+                <p class="article-excerpt">
+                    1964年，中国第一台大型通用数字电子计算机104机研制成功。该机采用磁芯存储器，运算速度达到每秒30万次，主要用于天气预报、工程计算和科学实验。104机的成功运行，大大缩短了中国与世界先进计算机技术的差距。
+                </p>
+                <a href="#" class="read-more">查看104机技术详情 &rarr;</a>
+            </article>
+
+            <article class="article-card">
+                <div class="article-meta">1971年 • 通用化里程碑</div>
+                <h3 class="article-title">中国第一台集成电路计算机DJS-180</h3>
+                <p class="article-excerpt">
+                    随着半导体技术的发展，1971年，中国研制成功第一台集成电路计算机DJS-180。这是中国计算机技术从电子管向集成电路过渡的重要标志，为后来微型计算机的普及和普及化奠定了技术基础。
+                </p>
+                <a href="#" class="read-more">探索集成电路时代 &rarr;</a>
+            </article>
+            
+            <article class="article-card">
+                <div class="article-meta">1973年 • 经典机型</div>
+                <h3 class="article-title">国产百万次计算机DJS-100系列</h3>
+                <p class="article-excerpt">
+                    1973年，以DJS-100系列为代表的国产计算机开始大规模生产。DJS-130作为DJS-100系列中的小型机代表，因其结构简单、性能稳定、价格低廉，成为了当时中国科研机构、高等院校和企业广泛使用的核心计算设备。
+                </p>
+                <a href="#" class="read-more">深入了解DJS-130 &rarr;</a>
+            </article>
+        </div>
+
+        <aside class="sidebar">
+            <div class="info-card">
+                <h3>DJS-130 关键参数</h3>
+                <ul class="data-list">
+                    <li>
+                        <span class="data-label">字长</span>
+                        <span class="data-value">16位</span>
+                    </li>
+                    <li>
+                        <span class="data-label">运算速度</span>
+                        <span class="data-value">50万次/秒</span>
+                    </li>
+                    <li>
+                        <span class="data-label">内存容量</span>
+                        <span class="data-value">32KB-128KB</span>
+                    </li>
+                    <li>
+                        <span class="data-label">主频</span>
+                        <span class="data-value">约1-2 MHz</span>
+                    </li>
+                    <li>
+                        <span class="data-label">磁芯存储器</span>
+                        <span class="data-value">磁芯体</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h3>相关标签</h3>
+                <div class="tag-cloud">
+                    <a href="#" class="tag">DJS-100系列</a>
+                    <a href="#" class="tag">磁芯存储</a>
+                    <a href="#" class="tag">晶体管</a>
+                    <a href="#" class="tag">北京计算机一厂</a>
+                    <a href="#" class="tag">早期计算机</a>
+                    <a href="#" class="tag">科研计算</a>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <h3>相关资料</h3>
+                <p style="font-size: 0.9rem; color: #666; margin-bottom: 10px;">
+                    <strong>参考资料：</strong>
+                </p>
+                <ul style="font-size: 0.85rem; color: #666; padding-left: 20px;">
+                    <li style="margin-bottom: 5px;">《中国计算机工业史》</li>
+                    <li style="margin-bottom: 5px;">中国科学院计算技术研究所档案</li>
+                    <li style="margin-bottom: 5px;">《计算机学报》早期文献</li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+</main>
+
+<section class="timeline-section">
+    <div class="container">
+        <h2 class="section-title" style="text-align: center; border: none;">中国计算机重要节点</h2>
+        <div class="timeline">
+            <div class="timeline-item left">
+                <div class="timeline-content">
+                    <div class="timeline-year">1958年</div>
+                    <h4>103机（DJS-1）</h4>
+                    <p>中国第一台通用数字电子计算机诞生，运算速度30次/秒。</p>
+                </div>
+            </div>
+            <div class="timeline-item right">
+                <div class="timeline-content">
+                    <div class="timeline-year">1964年</div>
+                    <h4>104机</h4>
+                    <p>中国第一台大型通用数字电子计算机，速度30万次/秒。</p>
+                </div>
+            </div>
+            <div class="timeline-item left">
+                <div class="timeline-content">
+                    <div class="timeline-year">1971年</div>
+                    <h4>DJS-180</h4>
+                    <p>中国第一台集成电路计算机，开启小型机时代。</p>
+                </div>
+            </div>
+            <div class="timeline-item right">
+                <div class="timeline-content">
+                    <div class="timeline-year">1973年</div>
+                    <h4>DJS-100系列</h4>
+                    <p>国产百万次计算机系列诞生，DJS-130成为经典小型机。</p>
+                </div>
+            </div>
+            <div class="timeline-item left">
+                <div class="timeline-content">
+                    <div class="timeline-year">1978年</div>
+                    <h4>DJS-130普及</h4>
+                    <p>晶体管小型机DJS-130在全国科研院所和高校广泛应用。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container footer-content">
+        <p>&copy; 2023 中国计算机发展史展示页. 保留所有权利.</p>
+        <p style="margin-top: 10px; font-size: 0.8rem;">本站内容仅供历史科普与学术研究参考，部分数据基于历史档案整理。</p>
+    </div>
+</footer>
+
+</body>
+</html>
