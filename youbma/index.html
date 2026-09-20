@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>有b吗 - 官方正版资源查询与安全浏览指南</title>
+    <meta name="description" content="有b吗官方查询平台，提供正版资源导航、安全浏览建议及网络使用规范指南。帮助用户快速识别合法合规内容，规避网络风险，享受纯净的网络环境。">
+    <meta name="keywords" content="有b吗, 正版资源, 网络安全, 浏览指南, 在线查询">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --primary-hover: #1d4ed8;
+            --secondary-color: #64748b;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-sub: #475569;
+            --border-color: #e2e8f0;
+            --success-color: #10b981;
+            --warning-color: #f59e0b;
+            --danger-color: #ef4444;
+            --spacing-unit: 16px;
+            --container-width: 1200px;
+            --header-height: 64px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Utility */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 24px;
+            border-radius: 6px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: none;
+            font-size: 14px;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-1px);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .badge-safe {
+            background-color: #dcfce7;
+            color: #166534;
+        }
+
+        .badge-warning {
+            background-color: #fef3c7;
+            color: #92400e;
+        }
+
+        /* Header */
+        header {
+            height: var(--header-height);
+            background-color: var(--card-bg);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 24px;
+        }
+
+        nav a {
+            font-size: 15px;
+            color: var(--text-sub);
+            font-weight: 500;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 12px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #eff6ff 0%, #ffffff 100%);
+            padding: 80px 0 60px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 16px;
+            color: var(--text-main);
+            letter-spacing: -0.5px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--text-sub);
+            max-width: 600px;
+            margin: 0 auto 32px;
+        }
+
+        .search-box {
+            max-width: 500px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 16px 56px 16px 24px;
+            border-radius: 50px;
+            border: 2px solid var(--border-color);
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .search-input:focus {
+            border-color: var(--primary-color);
+        }
+
+        .search-btn {
+            position: absolute;
+            right: 8px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Info Cards */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-top: -40px;
+            position: relative;
+            z-index: 10;
+            margin-bottom: 60px;
+        }
+
+        .info-card {
+            background: var(--card-bg);
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            border: 1px solid var(--border-color);
+        }
+
+        .info-card h3 {
+            font-size: 18px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .info-card p {
+            font-size: 14px;
+            color: var(--text-sub);
+        }
+
+        /* Content Section */
+        .content-section {
+            padding: 40px 0;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 32px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .section-desc {
+            font-size: 14px;
+            color: var(--text-sub);
+        }
+
+        /* List Style */
+        .feature-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .feature-item {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            border-color: var(--primary-color);
+        }
+
+        .feature-icon {
+            width: 40px;
+            height: 40px;
+            background-color: #eff6ff;
+            color: var(--primary-color);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+        }
+
+        .feature-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .feature-text {
+            font-size: 13px;
+            color: var(--text-sub);
+        }
+
+        /* Guidelines Section */
+        .guidelines-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .guide-block h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: var(--text-main);
+        }
+
+        .guide-step {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .step-number {
+            flex-shrink: 0;
+            width: 28px;
+            height: 28px;
+            background-color: var(--text-main);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .step-content h4 {
+            font-size: 15px;
+            margin-bottom: 4px;
+        }
+
+        .step-content p {
+            font-size: 13px;
+            color: var(--text-sub);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1e293b;
+            color: #94a3b8;
+            padding: 48px 0 24px;
+            margin-top: 60px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand h4 {
+            color: white;
+            font-size: 18px;
+            margin-bottom: 12px;
+        }
+
+        .footer-col h5 {
+            color: white;
+            font-size: 14px;
+            margin-bottom: 16px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-col a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 24px;
+            border-top: 1px solid #334155;
+            font-size: 13px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+            
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 12px 0;
+                gap: 12px;
+            }
+
+            nav ul {
+                gap: 16px;
+                font-size: 14px;
+            }
+
+            .header-actions {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .guidelines-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                有b吗
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#guide">使用指南</a></li>
+                    <li><a href="#safety">安全规范</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="btn btn-outline">登录</button>
+                <button class="btn btn-primary">注册账号</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>官方正版资源查询与浏览指南</h1>
+                <p>我们致力于提供安全、合规、高质量的互联网内容查询服务。在这里，您可以快速了解正规资源渠道，获取权威信息，享受纯净的网络体验。</p>
+                
+                <div class="search-box">
+                    <input type="text" class="search-input" placeholder="输入关键词，查询官方资源..." aria-label="资源搜索">
+                    <button class="search-btn" aria-label="搜索">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Info Cards -->
+        <div class="container">
+            <div class="info-grid">
+                <article class="info-card">
+                    <h3>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                        官方认证
+                    </h3>
+                    <p>所有推荐资源均经过人工审核与认证，确保来源正规，内容安全，符合国家法律法规及网络信息内容生态治理规定。</p>
+                </article>
+                <article class="info-card">
+                    <h3>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+                        </svg>
+                        快速导航
+                    </h3>
+                    <p>针对不同搜索意图，提供精准的分类导航与智能联想功能，帮助用户在最短时间内找到所需内容。</p>
+                </article>
+                <article class="info-card">
+                    <h3>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="16" x2="12" y2="12"></line>
+                            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                        </svg>
+                        权威解答
+                    </h3>
+                    <p>汇聚行业专家与资深用户经验，针对常见疑问提供详尽、客观、具有参考价值的解答与建议。</p>
+                </article>
+            </div>
+        </div>
+
+        <!-- Main Content Area -->
+        <section class="content-section" id="guide">
+            <div class="container">
+                <div class="section-header">
+                    <div>
+                        <h2 class="section-title">使用指南</h2>
+                        <p class="section-desc">如何通过正规渠道获取您需要的信息与服务</p>
+                    </div>
+                    <a href="#" class="btn btn-outline">查看全部指南 &rarr;</a>
+                </div>
+
+                <div class="feature-list">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
+                        </div>
+                        <h4 class="feature-title">注册与登录</h4>
+                        <p class="feature-text">使用真实有效的手机号码或邮箱注册账号，开启个性化服务与数据保存功能。</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                            </svg>
+                        </div>
+                        <h4 class="feature-title">精准搜索</h4>
+                        <p class="feature-text">利用高级搜索功能，通过标签、时间范围和内容类型筛选，快速定位目标资源。</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                            </svg>
+                        </div>
+                        <h4 class="feature-title">阅读与收藏</h4>
+                        <p class="feature-text">支持在线阅读、离线下载及内容收藏功能，方便您随时随地访问优质资源。</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <h4 class="feature-title">社区互动</h4>
+                        <p class="feature-text">加入兴趣社区，参与话题讨论，与其他用户分享见解，建立良好的网络社交圈。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Safety Section -->
+        <section class="content-section" id="safety" style="background-color: #f1f5f9;">
+            <div class="container">
+                <div class="section-header">
+                    <div>
+                        <h2 class="section-title">安全浏览规范</h2>
+                        <p class="section-desc">保护个人信息，远离网络陷阱，共建清朗空间</p>
+                    </div>
+                </div>
+
+                <div class="guidelines-wrapper">
+                    <div class="guide-block">
+                        <h3>安全第一：如何识别风险</h3>
+                        <div class="guide-step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>警惕非官方链接</h4>
+                                <p>不要点击来源不明的短链接或弹窗广告，始终通过本站提供的官方域名访问。</p>
+                            </div>
+                        </div>
+                        <div class="guide-step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>保护个人隐私</h4>
+                                <p>在注册或提交信息时，注意保护手机号、身份证号等敏感数据，不要随意泄露给第三方。</p>
+                            </div>
+                        </div>
+                        <div class="guide-step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>安装安全软件</h4>
+                                <p>定期更新手机或电脑的杀毒软件，及时扫描系统漏洞，防范恶意程序入侵。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="guide-block">
+                        <h3>合规使用：遵守网络法规</h3>
+                        <div class="guide-step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>尊重知识产权</h4>
+                                <p>支持正版，拒绝盗版。未经授权不得下载、传播或修改受版权保护的内容。</p>
+                            </div>
+                        </div>
+                        <div class="guide-step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>文明上网用语</h4>
+                                <p>在评论区发言应客观理性，不发布谣言、暴力、色情或煽动性言论。</p>
+                            </div>
+                        </div>
+                        <div class="guide-step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>举报违规行为</h4>
+                                <p>发现不良信息或违规账号，请立即通过平台提供的举报通道进行反馈。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="content-section" id="faq">
+            <div class="container">
+                <div class="section-header">
+                    <div>
+                        <h2 class="section-title">常见问题 (FAQ)</h2>
+                        <p class="section-desc">关于平台使用与服务的常见疑问解答</p>
+                    </div>
+                </div>
+
+                <div class="feature-list">
+                    <div class="feature-item">
+                        <h4 class="feature-title">Q: 注册账号需要付费吗？</h4>
+                        <p class="feature-text">A: 平台基础注册和浏览功能完全免费。部分高级会员服务或特定内容可能需要订阅或付费，具体请查看会员权益说明。</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4 class="feature-title">Q: 如何修改或找回密码？</h4>
+                        <p class="feature-text">A: 在登录页面点击“忘记密码”，通过绑定的手机号或邮箱接收验证码进行重置。如遇问题，请联系客服支持。</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4 class="feature-title">Q: 内容审核多久一次？</h4>
+                        <p class="feature-text">A: 平台采用7x24小时智能监控与人工审核相结合的模式，确保所有发布内容符合规范，发现违规即刻处理。</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4 class="feature-title">Q: 支持哪些移动端设备？</h4>
+                        <p class="feature-text">A: 官方网站完全适配 iOS、Android、Windows 及 macOS 系统的各类主流浏览器，体验流畅。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h4>有b吗</h4>
+                    <p style="font-size: 13px; line-height: 1.8;">
+                        专注提供安全、高效的互联网资源查询服务。我们致力于维护健康的网络环境，保护用户合法权益。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h5>关于我们</h5>
+                    <ul>
+                        <li><a href="#">平台简介</a></li>
+                        <li><a href="#">发展历程</a></li>
+                        <li><a href="#">加入我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>帮助中心</h5>
+                    <ul>
+                        <li><a href="#">使用教程</a></li>
+                        <li><a href="#">意见反馈</a></li>
+                        <li><a href="#">联系客服</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>法律信息</h5>
+                    <ul>
+                        <li><a href="#">隐私政策</a></li>
+                        <li><a href="#">服务条款</a></li>
+                        <li><a href="#">版权声明</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 有b吗平台 版权所有. 本站内容仅供学习交流使用，请遵守相关法律法规。</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
