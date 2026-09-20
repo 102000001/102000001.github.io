@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="你好外星人 - 专注探索外星文明、UFO目击事件、地外生命迹象及科幻文化资讯的科普平台。提供最新的UFO新闻、宇宙探索报告与外星文明猜想。">
+    <meta name="keywords" content="你好外星人, UFO, 外星人, 外星文明, 宇宙探索, UAP, 未知生物">
+    <title>你好外星人 - 外星文明探索与UFO目击指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --space-bg: #0b0d17;
+            --card-bg: #15192b;
+            --accent-primary: #00f2ff;
+            --accent-secondary: #7000ff;
+            --text-main: #e0e6ed;
+            --text-muted: #94a3b8;
+            --border-color: #2d3748;
+            --font-main: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', Arial, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--space-bg);
+            color: var(--text-main);
+            font-family: var(--font-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Utility Classes */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        /* Header */
+        header {
+            background: rgba(11, 13, 23, 0.95);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent-primary);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a:hover {
+            color: var(--accent-primary);
+        }
+
+        .search-btn {
+            background: transparent;
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .search-btn:hover {
+            border-color: var(--accent-primary);
+            color: var(--accent-primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+            background: radial-gradient(circle at center, #1a1f35 0%, var(--space-bg) 70%);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 3px),
+                radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 2px),
+                radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 3px);
+            background-size: 550px 550px, 350px 350px, 250px 250px;
+            background-position: 0 0, 40px 60px, 130px 270px;
+            opacity: 0.3;
+            animation: starMove 100s linear infinite;
+        }
+
+        @keyframes starMove {
+            from { transform: translateY(0); }
+            to { transform: translateY(-1000px); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 20px rgba(0, 242, 255, 0.5);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(45deg, var(--accent-secondary), var(--accent-primary));
+            color: #fff;
+            padding: 12px 35px;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 15px rgba(0, 242, 255, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 242, 255, 0.5);
+        }
+
+        /* Main Content Grid */
+        .main-layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            padding: 40px 0;
+        }
+
+        /* Articles Section */
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .article-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s, border-color 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .article-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-primary);
+        }
+
+        .card-image {
+            height: 200px;
+            background-color: #2d3748;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .article-card:hover .card-image img {
+            transform: scale(1.05);
+        }
+
+        .card-content {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-tag {
+            font-size: 0.8rem;
+            color: var(--accent-primary);
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .card-excerpt {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border-color);
+            padding-top: 15px;
+        }
+
+        /* Sidebar */
+        aside {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .widget {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 20px;
+        }
+
+        .widget-title {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--accent-secondary);
+            display: inline-block;
+        }
+
+        .ranking-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .ranking-list li:last-child {
+            border-bottom: none;
+        }
+
+        .rank-number {
+            width: 25px;
+            height: 25px;
+            background: var(--accent-secondary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .rank-number.top-1 { background: #ffd700; color: #000; }
+
+        .rank-info h4 {
+            font-size: 0.95rem;
+            margin-bottom: 4px;
+        }
+
+        .rank-info span {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .newsletter-form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .newsletter-form input {
+            padding: 12px;
+            background: rgba(0,0,0,0.2);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            color: white;
+        }
+
+        .newsletter-form button {
+            padding: 12px;
+            background: var(--accent-primary);
+            border: none;
+            border-radius: 6px;
+            color: #000;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 60px 0;
+            background: rgba(255,255,255,0.02);
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 20px;
+        }
+
+        .faq-item {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-primary);
+        }
+
+        .faq-item h3 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .faq-item p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        /* Footer */
+        footer {
+            background: #05060a;
+            padding: 40px 0 20px;
+            border-top: 1px solid var(--border-color);
+            margin-top: 40px;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+
+        .footer-col {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: var(--text-muted);
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--accent-primary);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .main-layout { grid-template-columns: 1fr; }
+            .nav-wrapper { flex-direction: column; height: auto; padding: 15px 0; gap: 15px; }
+            nav ul { flex-wrap: wrap; justify-content: center; }
+            .faq-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <span>★</span> 你好外星人
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#">探索宇宙</a></li>
+                    <li><a href="#">UFO目击</a></li>
+                    <li><a href="#">地外生命</a></li>
+                    <li><a href="#">科幻文化</a></li>
+                </ul>
+            </nav>
+            <button class="search-btn" onclick="alert('搜索功能即将上线...')">搜索</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>你好，外星人</h1>
+                <p>我们不是孤独的。探索未知的星空，见证人类与地外文明接触的每一个瞬间。</p>
+                <a href="#explore" class="cta-button">开始探索</a>
+            </div>
+        </section>
+
+        <div class="container main-layout" id="explore">
+            <!-- Content Column -->
+            <section class="content-area">
+                <div class="section-title">最新探索报告</div>
+                <div class="articles-grid">
+                    <article class="article-card">
+                        <div class="card-image">
+                            <img src="https://picsum.photos/seed/ufo1/400/300" alt="不明飞行物">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-tag">UFO目击</span>
+                            <h2 class="card-title">2023年全球UFO目击事件汇总：我们需要警惕吗？</h2>
+                            <p class="card-excerpt">根据全球不明航空现象研究组织（GEP）的最新数据，今年目击事件数量创历史新高。本文将分析主要目击地点及可能的科学解释。</p>
+                            <div class="card-footer">
+                                <span>2023-10-24</span>
+                                <span>阅读 5,203</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="article-card">
+                        <div class="card-image">
+                            <img src="https://picsum.photos/seed/mars/400/300" alt="火星探索">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-tag">深空探测</span>
+                            <h2 class="card-title">火星生命迹象新发现：寻找“地下海洋”</h2>
+                            <p class="card-excerpt">最新的火星探测任务传回高分辨率图像，暗示赤道附近存在液态水活动的痕迹，这为生命起源提供了新的线索。</p>
+                            <div class="card-footer">
+                                <span>2023-10-22</span>
+                                <span>阅读 3,890</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="article-card">
+                        <div class="card-image">
+                            <img src="https://picsum.photos/seed/aliens/400/300" alt="外星人接触">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-tag">接触理论</span>
+                            <h2 class="card-title">接触理论：我们如何与地外文明建立沟通</h2>
+                            <p class="card-excerpt">从德雷克公式到费米悖论，科学家们正在尝试构建沟通协议。本文探讨目前最可行的信号发送与接收方案。</p>
+                            <div class="card-footer">
+                                <span>2023-10-20</span>
+                                <span>阅读 2,100</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="article-card">
+                        <div class="card-image">
+                            <img src="https://picsum.photos/seed/space/400/300" alt="星际旅行">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-tag">未来科技</span>
+                            <h2 class="card-title">曲速引擎：星际旅行的终极梦想</h2>
+                            <p class="card-excerpt">虽然目前仍处于理论阶段，但物理学界对“阿库别瑞驱动”的研究正在取得突破性进展，或许十年内我们将看到原型机。</p>
+                            <div class="card-footer">
+                                <span>2023-10-18</span>
+                                <span>阅读 4,450</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Sidebar -->
+            <aside>
+                <div class="widget">
+                    <h3 class="widget-title">热门话题</h3>
+                    <ul class="ranking-list">
+                        <li>
+                            <span class="rank-number top-1">1</span>
+                            <div class="rank-info">
+                                <h4>51区解密档案</h4>
+                                <span>12.5万人关注</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="rank-number">2</span>
+                            <div class="rank-info">
+                                <h4>三体文化现象</h4>
+                                <span>8.2万人关注</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="rank-number">3</span>
+                            <div class="rank-info">
+                                <h4>麦田怪圈之谜</h4>
+                                <span>6.9万人关注</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="rank-number">4</span>
+                            <div class="rank-info">
+                                <h4>小绿人信号</h4>
+                                <span>5.4万人关注</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="rank-number">5</span>
+                            <div class="rank-info">
+                                <h4>罗斯威尔事件</h4>
+                                <span>4.1万人关注</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="widget">
+                    <h3 class="widget-title">订阅更新</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 10px;">获取最新的UFO动态与宇宙探索资讯。</p>
+                    <form class="newsletter-form" onsubmit="event.preventDefault(); alert('感谢订阅！我们将定期发送最新资讯。');">
+                        <input type="email" placeholder="您的邮箱地址" required>
+                        <button type="submit">订阅</button>
+                    </form>
+                </div>
+
+                <div class="widget">
+                    <h3 class="widget-title">热门分类</h3>
+                    <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                        <a href="#" style="background: rgba(255,255,255,0.05); padding: 5px 12px; border-radius: 15px; font-size: 0.85rem;">不明飞行物</a>
+                        <a href="#" style="background: rgba(255,255,255,0.05); padding: 5px 12px; border-radius: 15px; font-size: 0.85rem;">外星生命</a>
+                        <a href="#" style="background: rgba(255,255,255,0.05); padding: 5px 12px; border-radius: 15px; font-size: 0.85rem;">星际战争</a>
+                        <a href="#" style="background: rgba(255,255,255,0.05); padding: 5px 12px; border-radius: 15px; font-size: 0.85rem;">地外文明</a>
+                        <a href="#" style="background: rgba(255,255,255,0.05); padding: 5px 12px; border-radius: 15px; font-size: 0.85rem;">外星基地</a>
+                    </div>
+                </div>
+            </aside>
+        </div>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="container">
+                <div class="section-title">常见问题解答</div>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h3>什么是费米悖论？</h3>
+                        <p>费米悖论是指尽管宇宙极其古老且广阔，却没有任何确凿证据表明外星文明存在。这引发了对大过滤器理论的热烈讨论。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>如何判断一个UFO目击事件的真实性？</h3>
+                        <p>判断真实性需要多角度分析：是否有其他物理现象的替代解释（如气象气球、光学幻觉），以及目击者的证词是否具有一致性。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>SETI项目是如何工作的？</h3>
+                        <p>SETI（搜寻地外文明计划）通过射电望远镜监听宇宙中的无线电信号，试图捕捉可能由智能文明发送的规律性编码。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>人类目前有接收过外星信号吗？</h3>
+                        <p>历史上曾有几次著名的信号接收事件，如“Wow!信号”，但目前均未得到确凿的重复确认或后续信号。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <a href="#" class="logo" style="margin-bottom: 15px;">
+                        <span>★</span> 你好外星人
+                    </a>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">
+                        致力于普及宇宙探索知识，记录人类对未知的每一次好奇与尝试。欢迎加入这场跨越星际的对话。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>探索频道</h4>
+                    <ul>
+                        <li><a href="#">深空摄影</a></li>
+                        <li><a href="#">天体物理</a></li>
+                        <li><a href="#">火星殖民</a></li>
+                        <li><a href="#">黑洞奥秘</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <ul>
+                        <li><a href="#">编辑团队</a></li>
+                        <li><a href="#">投稿指南</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                        <li><a href="#">联系方式</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 你好外星人探索网. All Rights Reserved. 本站内容仅供科普参考，不代表绝对事实。
+            </div>
+        </div>
+    </footer>
+
+</body>
+  </html>
