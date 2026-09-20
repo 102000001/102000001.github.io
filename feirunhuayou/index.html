@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="废润滑油回收处理专业指南，涵盖废油分类标准、安全环保处理方法、企业回收政策及废油再生利用流程。提供废机油、液压油、切削油等工业废油回收服务信息。">
+    <meta name="keywords" content="废润滑油,废机油回收,工业废油处理,废油再生,环保回收">
+    <title>废润滑油-工业废油回收处理与再生利用指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #27ae60;
+            --accent-hover: #219150;
+            --text-color: #333;
+            --light-text: #666;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --border-radius: 8px;
+            --container-width: 1200px;
+            --spacing-unit: 1rem;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-color);
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        .cta-button {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+        }
+
+        .cta-button:hover {
+            background-color: var(--accent-hover);
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #34495e 100%);
+            color: white;
+            padding: 4rem 1rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .hero .btn-outline {
+            background-color: transparent;
+            border: 2px solid white;
+            color: white;
+            padding: 0.6rem 1.8rem;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+        }
+
+        .hero .btn-outline:hover {
+            background-color: white;
+            color: var(--primary-color);
+        }
+
+        /* Container */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 3rem 1rem;
+        }
+
+        /* Section Titles */
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .section-header p {
+            color: var(--light-text);
+        }
+
+        /* Problem Card */
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid transparent;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .card.warning { border-color: #e74c3c; }
+        .card.info { border-color: #3498db; }
+        .card.success { border-color: #27ae60; }
+
+        .card-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .card h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.25rem;
+        }
+
+        .card p {
+            color: var(--light-text);
+            font-size: 0.95rem;
+        }
+
+        /* Classification Section */
+        .classification-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .class-item {
+            background: white;
+            border: 1px solid #eee;
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .class-item:hover {
+            border-color: var(--accent-color);
+            background-color: #f0fdf4;
+        }
+
+        .class-icon {
+            width: 50px;
+            height: 50px;
+            background-color: #e8f5e9;
+            color: var(--accent-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 1.5rem;
+        }
+
+        .class-item h4 {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .class-item p {
+            font-size: 0.85rem;
+            color: var(--light-text);
+        }
+
+        /* Process Section */
+        .process-steps {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            top: 25px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: #eee;
+            z-index: 0;
+            display: block;
+        }
+
+        .step {
+            position: relative;
+            z-index: 1;
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin: 0 auto 1.5rem;
+            border: 4px solid white;
+            box-shadow: 0 0 0 2px var(--primary-color);
+        }
+
+        .step h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .step p {
+            font-size: 0.9rem;
+            color: var(--light-text);
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background-color: #eef2f5;
+            padding: 4rem 1rem;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        details {
+            background: white;
+            margin-bottom: 1rem;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        summary {
+            padding: 1.2rem;
+            cursor: pointer;
+            font-weight: 600;
+            position: relative;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::after {
+            content: '+';
+            font-size: 1.5rem;
+            font-weight: 300;
+            color: var(--accent-color);
+        }
+
+        details[open] summary::after {
+            content: '-';
+        }
+
+        details[open] summary {
+            border-bottom: 1px solid #eee;
+        }
+
+        .faq-content {
+            padding: 1.2rem;
+            color: var(--light-text);
+            line-height: 1.7;
+        }
+
+        /* Contact/Service Section */
+        .service-banner {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 3rem 1rem;
+            text-align: center;
+            border-radius: var(--border-radius);
+            margin-bottom: 4rem;
+        }
+
+        .service-banner h2 {
+            margin-bottom: 1rem;
+        }
+
+        .service-banner p {
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .contact-info ul li {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.8rem;
+        }
+
+        .contact-icon {
+            color: var(--accent-color);
+            font-size: 1.2rem;
+            margin-top: 3px;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: inherit;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            height: 100px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 0.8rem;
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: var(--accent-hover);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a252f;
+            color: #bdc3c7;
+            padding: 3rem 1rem 1rem;
+        }
+
+        .footer-content {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 1.2rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.6rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid #2c3e50;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                height: auto;
+                padding: 1rem;
+            }
+
+            nav ul {
+                margin: 1rem 0;
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .process-steps::before {
+                display: none;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .step {
+                margin-bottom: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <span>♻️</span> 绿源再生
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#problem">处理难点</a></li>
+                    <li><a href="#classification">分类标准</a></li>
+                    <li><a href="#process">回收流程</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <a href="#contact" class="cta-button">预约回收</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>废润滑油综合处理与资源化利用</h1>
+            <p>专业解决工业废油、废机油、切削油等危险废弃物的合规处理难题，助力企业实现环保达标与资源循环。</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="cta-button">立即咨询报价</a>
+                <a href="#process" class="btn-outline">了解回收流程</a>
+            </div>
+        </section>
+
+        <!-- Problem Section -->
+        <section id="problem" class="container">
+            <div class="section-header">
+                <h2>为什么需要专业处理废润滑油？</h2>
+                <p>废润滑油属于危险废物，随意倾倒会对土壤、水源和生态环境造成不可逆的污染。</p>
+            </div>
+            <div class="problem-grid">
+                <article class="card warning">
+                    <div class="card-icon">⚠️</div>
+                    <h3>环境污染风险</h3>
+                    <p>废油渗入地下会污染土壤和地下水，破坏微生物环境。油类物质覆盖水面会阻碍水体复氧，导致水生生物死亡。</p>
+                </article>
+                <article class="card info">
+                    <div class="card-icon">⚖️</div>
+                    <h3>法律合规要求</h3>
+                    <p>根据《固体废物污染环境防治法》，产生废油的单位必须持有危险废物经营许可证，并委托有资质的单位进行处置。</p>
+                </article>
+                <article class="card success">
+                    <div class="card-icon">♻️</div>
+                    <h3>资源再生价值</h3>
+                    <p>通过基础油再生技术，废润滑油可提炼回基础油，重新用于润滑油生产，实现资源的循环利用，降低企业成本。</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Classification Section -->
+        <section id="classification" class="container" style="background-color: #fff; padding: 3rem 1rem; border-radius: var(--border-radius);">
+            <div class="section-header">
+                <h2>常见废润滑油分类</h2>
+                <p>根据成分和用途，废润滑油通常分为以下几类，不同类别处理方式略有差异。</p>
+            </div>
+            <div class="classification-grid">
+                <div class="class-item">
+                    <div class="class-icon">🛢️</div>
+                    <h4>废机油</h4>
+                    <p>发动机、机械设备更换下来的润滑油，是最常见的废油类型。</p>
+                </div>
+                <div class="class-item">
+                    <div class="class-icon">⚙️</div>
+                    <h4>液压油</h4>
+                    <p>用于液压系统的矿物油或合成油，含有添加剂，需单独收集。</p>
+                </div>
+                <div class="class-item">
+                    <div class="class-icon">🔧</div>
+                    <h4>切削油</h4>
+                    <p>金属加工过程中使用的冷却润滑液，可能含有金属微粒和乳化剂。</p>
+                </div>
+                <div class="class-item">
+                    <div class="class-icon">🚗</div>
+                    <h4>齿轮油</h4>
+                    <p>用于齿轮传动系统的润滑油，粘度较高，通常呈深色。</p>
+                </div>
+                <div class="class-item">
+                    <div class="class-icon">🛢️</div>
+                    <h4>变压器油</h4>
+                    <p>用于电力变压器绝缘和冷却的油品，属于绝缘油类。</p>
+                </div>
+                <div class="class-item">
+                    <div class="class-icon">🧪</div>
+                    <h4>废润滑油添加剂</h4>
+                    <p>废油中分离出的添加剂或废溶剂，属于化学危险品。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section id="process" class="container">
+            <div class="section-header">
+                <h2>标准回收处理流程</h2>
+                <p>从收集、运输到再生利用，我们提供全流程合规服务。</p>
+            </div>
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>预约与评估</h3>
+                    <p>企业通过电话或在线表单预约，我们评估废油种类、数量及存放条件。</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>上门收集</h3>
+                    <p>派遣具备危废运输资质的车辆和人员，使用专用容器进行安全收集。</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>合规运输</h3>
+                    <p>严格按照危废运输规范，通过GPS监控运输过程，确保安全无泄漏。</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>再生加工</h3>
+                    <p>在具备资质的工厂进行脱色、脱水、脱酸等处理，生产再生基础油。</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <h3>资源利用</h3>
+                    <p>再生基础油可用于调制新润滑油，或作为燃料、化工原料等。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faq-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>常见问题解答</h2>
+                    <p>关于废润滑油回收的常见疑问与解答。</p>
+                </div>
+                <div class="faq-container">
+                    <details>
+                        <summary>废润滑油属于什么废物类别？</summary>
+                        <div class="faq-content">
+                            在中国《国家危险废物名录》中，废矿物油及其含废矿物油制品通常属于“HW08 废矿物油与含矿物油废物”类别，代码为900-214-08（其他生产、销售、使用过程中产生的废矿物油及含矿物油废物）。
+                        </div>
+                    </details>
+                    <details>
+                        <summary>企业自己处理废油需要什么资质？</summary>
+                        <div class="faq-content">
+                            产生废油的企业通常不需要自己具备处理资质，但必须建立危险废物管理台账，如实记录废油的种类、数量、流向等信息，并委托有《危险废物经营许可证》的单位进行处置。
+                        </div>
+                    </details>
+                    <details>
+                        <summary>废油回收有补贴吗？</summary>
+                        <div class="faq-content">
+                            废油回收本身不属于政府补贴项目，但合规处置可以避免企业因违规排污而面临高额罚款，从长远看是一种成本控制。部分地区的环保政策可能对再生资源利用有特定支持，建议咨询当地环保部门。
+                        </div>
+                    </details>
+                    <details>
+                        <summary>如何计算废油的重量？</summary>
+                        <div class="faq-content">
+                            重量通常通过称重确定。如果是桶装油，可使用电子秤称量桶和油的总重，减去空桶重量。如果是散装油，需使用地磅或专业计量工具。
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="container">
+            <div class="service-banner">
+                <h2>立即获取废油回收报价</h2>
+                <p>专业团队随时待命，免费提供上门评估服务，确保合规、安全、高效。</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>联系方式</h3>
+                    <p style="margin-bottom: 2rem; color: #666;">我们提供全国范围内的废油回收服务，欢迎联系咨询。</p>
+                    <ul>
+                        <li>
+                            <span class="contact-icon">📞</span>
+                            <div>
+                                <strong>咨询热线：</strong><br>
+                                400-123-4567
+                            </div>
+                        </li>
+                        <li>
+                            <span class="contact-icon">📧</span>
+                            <div>
+                                <strong>电子邮箱：</strong><br>
+                                service@greenrenewal.com
+                            </div>
+                        </li>
+                        <li>
+                            <span class="contact-icon">📍</span>
+                            <div>
+                                <strong>服务范围：</strong><br>
+                                全国主要工业城市（北京、上海、广州、深圳、杭州、武汉等）
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="contact-form">
+                    <form action="#" method="POST" onsubmit="event.preventDefault(); alert('感谢您的留言！我们的工作人员将在24小时内与您联系。');">
+                        <div class="form-group">
+                            <label for="name">您的称呼</label>
+                            <input type="text" id="name" name="name" placeholder="请输入姓名" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">联系电话</label>
+                            <input type="tel" id="phone" name="phone" placeholder="请输入手机号码" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="waste-type">废油类型</label>
+                            <select id="waste-type" name="waste-type">
+                                <option value="">请选择...</option>
+                                <option value="engine-oil">废机油</option>
+                                <option value="hydraulic">液压油</option>
+                                <option value="cutting">切削油</option>
+                                <option value="gear">齿轮油</option>
+                                <option value="other">其他/不确定</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="quantity">预估数量（升/吨）</label>
+                            <input type="text" id="quantity" name="quantity" placeholder="例如：200升 或 1吨">
+                        </div>
+                        <button type="submit" class="submit-btn">提交咨询</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>绿源再生</h4>
+                <p>致力于工业废油回收与资源化利用，提供专业的环保解决方案，守护绿水青山。</p>
+            </div>
+            <div class="footer-col">
+                <h4>快速链接</h4>
+                <ul>
+                    <li><a href="#problem">环保政策</a></li>
+                    <li><a href="#classification">废油分类</a></li>
+                    <li><a href="#process">回收流程</a></li>
+                    <li><a href="#contact">联系我们</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>服务项目</h4>
+                <ul>
+                    <li><a href="#">废机油回收</a></li>
+                    <li><a href="#">工业废油处置</a></li>
+                    <li><a href="#">设备油品更换</a></li>
+                    <li><a href="#">废油再生技术</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 绿源再生资源利用有限公司 版权所有 | 仅供演示</p>
+        </div>
+    </footer>
+
+</body>
+  </html>
