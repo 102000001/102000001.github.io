@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>足球游戏-深度评测、模拟经营与足球电竞指南</title>
+    <meta name="description" content="本站提供最全面的足球游戏资讯与攻略。涵盖实况足球、FIFA、FC 24等主流足球电竞游戏，包括球员数据分析、战术模拟、新手入门指南及模拟经营类足球游戏的深度评测。">
+    <meta name="keywords" content="足球游戏,实况足球,FIFA,FC 24,足球电竞,足球模拟经营,足球攻略">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #1a73e8;
+            --secondary-color: #0d47a1;
+            --accent-color: #ff6b00;
+            --dark-bg: #121212;
+            --card-bg: #1e1e1e;
+            --text-main: #ffffff;
+            --text-secondary: #b0b0b0;
+            --border-radius: 8px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Utility */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .section-title a {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            font-weight: normal;
+        }
+
+        .section-title a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Header */
+        header {
+            background-color: rgba(18, 18, 18, 0.95);
+            border-bottom: 1px solid #333;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--primary-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--text-main);
+        }
+
+        .search-btn {
+            background: none;
+            border: none;
+            color: var(--text-main);
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 500px;
+            background: linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0.4)), url('https://picsum.photos/seed/stadium/1600/900.jpg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content {
+            max-width: 600px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #ddd;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(26, 115, 232, 0.4);
+        }
+
+        .btn-outline {
+            border: 2px solid white;
+            color: white;
+            margin-left: 10px;
+        }
+
+        .btn-outline:hover {
+            background-color: white;
+            color: var(--dark-bg);
+        }
+
+        /* Category Grid */
+        .categories {
+            padding: 60px 0;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .cat-card {
+            background-color: var(--card-bg);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            border: 1px solid #333;
+            transition: border-color 0.3s;
+        }
+
+        .cat-card:hover {
+            border-color: var(--primary-color);
+        }
+
+        .cat-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .cat-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .cat-card p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Main Content Area */
+        .content-wrapper {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            padding: 40px 0;
+        }
+
+        /* Featured Section */
+        .featured {
+            margin-bottom: 50px;
+        }
+
+        .game-card {
+            display: flex;
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            margin-bottom: 20px;
+            border: 1px solid #333;
+        }
+
+        .game-thumb {
+            width: 280px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .game-info {
+            padding: 25px;
+            flex: 1;
+        }
+
+        .game-tag {
+            font-size: 0.75rem;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .game-info h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .game-info p {
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .game-meta {
+            display: flex;
+            gap: 20px;
+            font-size: 0.85rem;
+            color: #888;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* Latest News List */
+        .news-list {
+            list-style: none;
+        }
+
+        .news-item {
+            padding: 20px 0;
+            border-bottom: 1px solid #333;
+        }
+
+        .news-item:last-child {
+            border-bottom: none;
+        }
+
+        .news-item h3 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        .news-item h3 a:hover {
+            color: var(--primary-color);
+        }
+
+        .news-meta {
+            font-size: 0.8rem;
+            color: #666;
+        }
+
+        /* Sidebar */
+        .sidebar-widget {
+            background-color: var(--card-bg);
+            padding: 25px;
+            border-radius: var(--border-radius);
+            margin-bottom: 30px;
+            border: 1px solid #333;
+        }
+
+        .widget-title {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #333;
+        }
+
+        .ranking-list {
+            counter-reset: rank;
+        }
+
+        .ranking-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .ranking-item::before {
+            counter-increment: rank;
+            content: counter(rank);
+            width: 25px;
+            height: 25px;
+            background-color: #333;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+
+        .ranking-item:nth-child(1)::before { background-color: #ffd700; color: #000; }
+        .ranking-item:nth-child(2)::before { background-color: #c0c0c0; color: #000; }
+        .ranking-item:nth-child(3)::before { background-color: #cd7f32; color: #000; }
+
+        .ranking-item a {
+            font-size: 1rem;
+            color: var(--text-main);
+        }
+
+        .ranking-item a:hover {
+            color: var(--primary-color);
+        }
+
+        .chart-container {
+            height: 200px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-around;
+            padding-top: 20px;
+        }
+
+        .bar-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+            width: 15%;
+        }
+
+        .bar {
+            width: 100%;
+            background-color: var(--primary-color);
+            border-radius: 4px 4px 0 0;
+            transition: height 1s ease-out;
+            position: relative;
+        }
+
+        .bar:hover {
+            background-color: var(--accent-color);
+        }
+
+        .bar-label {
+            font-size: 0.7rem;
+            color: #888;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 60px 0;
+            background-color: #181818;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #333;
+            padding: 20px 0;
+        }
+
+        .faq-question {
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .faq-answer {
+            margin-top: 15px;
+            color: var(--text-secondary);
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0a0a0a;
+            padding: 50px 0 20px;
+            border-top: 1px solid #333;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #888;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #222;
+            color: #555;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .content-wrapper { grid-template-columns: 1fr; }
+            .game-card { flex-direction: column; }
+            .game-thumb { width: 100%; height: 200px; }
+            nav ul { display: none; } /* Simplified mobile nav */
+            .header-inner { justify-content: center; }
+            .logo { margin: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <span>⚽</span> 球场风云
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">实况足球</a></li>
+                    <li><a href="#">FIFA / FC 24</a></li>
+                    <li><a href="#">模拟经营</a></li>
+                    <li><a href="#">攻略资讯</a></li>
+                    <li><a href="#">硬件评测</a></li>
+                </ul>
+            </nav>
+            <button class="search-btn">🔍</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>掌控绿茵场<br>体验极致足球乐趣</h1>
+                    <p>从真实的球员数据模拟到宏大的俱乐部经营，我们为您提供最专业的足球游戏评测、战术解析与最新版本更新指南。</p>
+                    <div>
+                        <a href="#featured" class="btn btn-primary">浏览推荐</a>
+                        <a href="#guide" class="btn btn-outline">新手入门</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories -->
+        <section class="categories container">
+            <div class="category-grid">
+                <div class="cat-card">
+                    <span class="cat-icon">🎮</span>
+                    <h3>足球电竞</h3>
+                    <p>实况足球、FIFA、FC 24 玩法技巧与球员评测</p>
+                </div>
+                <div class="cat-card">
+                    <span class="cat-icon">🏆</span>
+                    <h3>模拟经营</h3>
+                    <p>FM系列、足球经理俱乐部建设与转会策略</p>
+                </div>
+                <div class="cat-card">
+                    <span class="cat-icon">⚽</span>
+                    <h3>VR/3D体验</h3>
+                    <p>VR足球游戏与次世代足球大作体验分享</p>
+                </div>
+                <div class="cat-card">
+                    <span class="cat-icon">🔧</span>
+                    <h3>硬件配置</h3>
+                    <p>次世代主机与高性能显卡在足球游戏中的表现</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <div class="container content-wrapper" id="featured">
+            <!-- Left Column -->
+            <div class="main-column">
+                <div class="section-title">
+                    <span>热门推荐</span>
+                    <a href="#">查看更多 &rarr;</a>
+                </div>
+
+                <!-- Featured Game 1 -->
+                <article class="game-card">
+                    <img src="https://picsum.photos/seed/fifa/300/200" alt="FC 24封面" class="game-thumb">
+                    <div class="game-info">
+                        <span class="game-tag">FC 24</span>
+                        <h2>FC 24 球员数据深度解析：姆巴佩与哈兰德的巅峰对决</h2>
+                        <p>EA Sports FC 24 引入了全新的“生活模式”与更真实的物理引擎。本文将深入分析当前版本中SBC球员的实战效果，以及如何在联赛模式中利用哈兰德的终结能力建立必胜优势。</p>
+                        <div class="game-meta">
+                            <span class="meta-item">📅 2023-10-24</span>
+                            <span class="meta-item">👁️ 12,304 阅读</span>
+                            <span class="meta-item">💬 89 评论</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Featured Game 2 -->
+                <article class="game-card">
+                    <img src="https://picsum.photos/seed/pes/300/200" alt="实况足球封面" class="game-thumb">
+                    <div class="game-info">
+                        <span class="game-tag">实况足球</span>
+                        <h2>实况足球 2024 541阵型战术指南：防守反击的最佳选择</h2>
+                        <p>随着版本更新，中前卫的防守能力大幅提升。本文推荐经典的541防守阵型，探讨如何利用边后卫的插上助攻与中场的拦截能力，在快速攻防转换中占据主动。</p>
+                        <div class="game-meta">
+                            <span class="meta-item">📅 2023-10-22</span>
+                            <span class="meta-item">👁️ 8,921 阅读</span>
+                            <span class="meta-item">💬 45 评论</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Featured Game 3 -->
+                <article class="game-card">
+                    <img src="https://picsum.photos/seed/sim/300/200" alt="足球经理封面" class="game-thumb">
+                    <div class="game-info">
+                        <span class="game-tag">足球经理</span>
+                        <h2>FM 2024 隐藏球员挖掘：如何找到身价翻倍的潜力新星</h2>
+                        <p>在模拟经营类游戏中，青训营是俱乐部的未来。本文将分享FM 2024中几个容易被忽视的青训天才，以及如何通过调整训练计划来最大化他们的成长速度。</p>
+                        <div class="game-meta">
+                            <span class="meta-item">📅 2023-10-20</span>
+                            <span class="meta-item">👁️ 15,670 阅读</span>
+                            <span class="meta-item">💬 120 评论</span>
+                        </div>
+                    </div>
+                </article>
+
+                <div class="section-title" style="margin-top: 50px;">
+                    <span>最新动态</span>
+                </div>
+                <ul class="news-list">
+                    <li class="news-item">
+                        <h3><a href="#">2024年世界杯预选赛游戏模式上线：虚拟国家队挑战开启</a></h3>
+                        <div class="news-meta">2023-10-25 · 游戏更新</div>
+                    </li>
+                    <li class="news-item">
+                        <h3><a href="#">PS5 Pro 在《FIFA 24》中的画质提升实测报告</a></h3>
+                        <div class="news-meta">2023-10-24 · 硬件评测</div>
+                    </li>
+                    <li class="news-item">
+                        <h3><a href="#">足球游戏中的战术板设计：从442到3-4-3的演变</a></h3>
+                        <div class="news-meta">2023-10-23 · 策略分析</div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Right Column Sidebar -->
+            <aside class="sidebar">
+                <!-- Player Rating Chart -->
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">当前版本最强阵容</h3>
+                    <div class="chart-container">
+                        <div class="bar-group">
+                            <div class="bar" style="height: 95%;"></div>
+                            <span class="bar-label">哈</span>
+                        </div>
+                        <div class="bar-group">
+                            <div class="bar" style="height: 90%;"></div>
+                            <span class="bar-label">姆</span>
+                        </div>
+                        <div class="bar-group">
+                            <div class="bar" style="height: 88%;"></div>
+                            <span class="bar-label">维</span>
+                        </div>
+                        <div class="bar-group">
+                            <div class="bar" style="height: 85%;"></div>
+                            <span class="bar-label">莱</span>
+                        </div>
+                        <div class="bar-group">
+                            <div class="bar" style="height: 82%;"></div>
+                            <span class="bar-label">贝</span>
+                        </div>
+                    </div>
+                    <p style="text-align: center; margin-top: 15px; font-size: 0.8rem; color: #888;">数据来源：社区球员数据统计</p>
+                </div>
+
+                <!-- Hot Topics -->
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">热门话题</h3>
+                    <ul class="ranking-list">
+                        <li class="ranking-item">
+                            <a href="#">SBC兑换推荐：这几张卡性价比最高</a>
+                        </li>
+                        <li class="ranking-item">
+                            <a href="#">如何解决游戏卡顿与掉帧问题</a>
+                        </li>
+                        <li class="ranking-item">
+                            <a href="#">2024年最佳中场球员Top 10</a>
+                        </li>
+                        <li class="ranking-item">
+                            <a href="#">新手必看：转会市场操作技巧</a>
+                        </li>
+                        <li class="ranking-item">
+                            <a href="#">实况足球球员盘带技巧详解</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Ad Placeholder -->
+                <div class="sidebar-widget" style="background-color: #000; display: flex; align-items: center; justify-content: center; min-height: 250px; color: #444; border-style: dashed;">
+                    广告位预留
+                </div>
+            </aside>
+        </div>
+
+        <!-- FAQ Section -->
+        <section class="faq-section container" id="guide">
+            <div class="section-title">
+                <span>新手入门指南</span>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">哪个足球游戏更真实？实况还是FIFA？</div>
+                    <div class="faq-answer">这取决于您的偏好。实况足球（eFootball）在球员动作和身体对抗上更接近真实比赛，且无氪金要素；FIFA（现更名为FC）则拥有庞大的授权联赛和更华丽的操作手感，但需要大量投入游戏币。两者各有千秋，建议先试玩体验。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">模拟经营类游戏（FM）适合什么人玩？</div>
+                    <div class="faq-answer">适合喜欢策略思考、数据分析以及享受幕后管理乐趣的玩家。FM系列不强调操作技巧，而更考验您对战术板设置、转会谈判和球员心理的把控能力，是一款深度极高的“数字足球经理”。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">玩足球游戏需要什么样的电脑配置？</div>
+                    <div class="faq-answer">目前主流的3D足球游戏对显卡要求较高。如果追求1080P 60帧流畅体验，建议显卡至少为GTX 1060或RX 580级别；若要开启4K分辨率或光线追踪，则需要RTX 3060 Ti以上的高性能显卡。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">如何快速提升在游戏中的胜率？</div>
+                    <div class="faq-answer">提升胜率的关键在于熟悉操作手感、建立自己的战术体系以及合理利用球员特性。建议先在练习模式中熟悉按键，然后选择一种喜欢的阵型（如4-3-3或4-2-3-1）坚持使用，不要频繁更换。</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <p style="color: #888; font-size: 0.9rem;">球场风云致力于为全球足球游戏爱好者提供最及时、最专业的资讯与攻略，是您绿茵场上的最佳助手。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>游戏分类</h4>
+                    <ul>
+                        <li><a href="#">实况足球</a></li>
+                        <li><a href="#">FC 24</a></li>
+                        <li><a href="#">足球经理</a></li>
+                        <li><a href="#">VR足球</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>支持服务</h4>
+                    <ul>
+                        <li><a href="#">提交Bug</a></li>
+                        <li><a href="#">投稿攻略</a></li>
+                        <li><a href="#">广告合作</a></li>
+                        <li><a href="#">免责声明</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关注我们</h4>
+                    <ul>
+                        <li><a href="#">微信公众号</a></li>
+                        <li><a href="#">官方微博</a></li>
+                        <li><a href="#">Bilibili</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 球场风云. All Rights Reserved. 本站内容仅供交流学习使用。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple FAQ Interaction
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+
+            // Add smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+  </html>
